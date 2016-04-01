@@ -1,0 +1,19 @@
+#import clock kivy.clock.Clock
+
+<CameraLayout>:
+    orientation: 'vertical'
+	Camera:
+		id: camera
+		resolution: (320, 300)
+		play: False
+        on_texture: root.textureEvent()
+    ToggleButton:
+		text: 'Play'
+		on_press: camera.play = not camera.play
+		size_hint_y: None
+		height: '48dp'
+	# ToggleButton:
+	# 	text: 'Switch Camera'
+	# 	on_press: camera.index = 1 if camera.index == 0 else 0
+	# 	size_hint_y: None
+	# 	height: '48dp'
